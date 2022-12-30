@@ -116,6 +116,11 @@ Pada tampilan halaman awal akan disajikan kolom SSID, Password, IP, dan Gateway.
 
 Setelah melakukan submit, ESP akan menyimpan data pada form dan melakukan koneksi ke jaringan tersebut. Jika jaringan terputus, maka user dapat melakukan restart dan konfigurasi ulang ESP. Sehingga user tidak perlu mengubah koding dan hanya perlu mengakses IP address dari ESP saja.
   
+  ![1](https://user-images.githubusercontent.com/118702169/210025541-9a81d24a-a18c-4b88-a145-b8a3ea31b1ef.png)
+  ![2](https://user-images.githubusercontent.com/118702169/210025543-74591a3a-6e17-4c14-a370-66672e4019d2.png)
+  ![3](https://user-images.githubusercontent.com/118702169/210025545-0a49156f-0547-4e26-913d-1b402d1da420.png)
+  ![4](https://user-images.githubusercontent.com/118702169/210025550-942b290c-8379-4633-a16d-f21acd13c152.png)
+
     <img src="https://user-images.githubusercontent.com/49542850/209770990-41050f3a-48ef-459f-b0f3-0883ce2f3bab.png" width=600px>
     <img src="https://user-images.githubusercontent.com/49542850/209770995-4659bd1e-d14f-4a07-8e4f-89b2efee8040.png" width=600px>
     <img src="https://user-images.githubusercontent.com/49542850/209770996-6436cddc-9382-4621-bb08-e0b1676be455.png" width=600px>
