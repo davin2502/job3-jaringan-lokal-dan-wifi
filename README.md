@@ -98,12 +98,35 @@ Hostname merupakan identitas perangkat yang dipakai oleh ESP32. Hostname akan mu
 
   <img src="https://user-images.githubusercontent.com/49542850/209751690-5897da3c-f8aa-4e34-90ed-a9ca76194402.png" width=600px>
   <img src="https://user-images.githubusercontent.com/49542850/209751694-7465347a-596b-48b6-88a8-8efaabae92a9.png" width=600px>
-  <img src="" width=600px>
   
 ESP akan melakukan inisialisasi awal untuk WiFi, dht, serial monitor, serta web server. ESP akan melakukan hosting web server menggunakan localhost sebagai servernya. Web server ini dapat diakses menggunakan IP address dari ESP setelah terhubung dengan jaringan WiFi.
 
 ESP akan membaca data dari sensor berupa suhu dan kelembaban yang kemudian disimpan dalam variabel. Data dari variabel kemudian dikirim melalui link yang sudah disediakan menggunakan method POST via javascript. Hasil dari sensor kemudian akan muncul pada web sebagaimana contoh.
 
+## Tugas
+  1. Pastikan library SPIIFS, AsyncTCP dan ESPAsyncWebServer sudah terinstal.
+  2. Buka program pada source code. Serta siapkan folder data di folder program (.ino).
+  3. Pastikan file web server (html dan js) sudah siap.
+  4. Pilih Tools > ESP32 Sketch Data Upload untuk mengupload folder data. Jika terjadi connecting, maka tekan tombol boot pada board.
+  5. Upload program seperti biasa.
+  
+Pada tahap awal, ESP akan membuat beberapa file teks untuk menyimpan data berupa ssid, password, IP, dan gateway. Kemudian ESP akan mengubah mode jaringan menjadi AP agar user dapat terkoneksi dan melakukan konfigurasi. ESP juga memulai service web server nya pada alamat localnya. Tampilan dari web server dibuat pada file terpisah yaitu html, js, dan css seperti web pada umumnya. File tersebut diimport pada ESP untuk dilakukan routing ke address.
 
+Pada tampilan halaman awal akan disajikan kolom SSID, Password, IP, dan Gateway. Secara default, bila hanya mengisi SSID dan Password, maka konfigurasi akan berupa DHCP sedangkan jika diisi IP maupun gateway akan menggunakan alamat tersebut (statik).
 
+Setelah melakukan submit, ESP akan menyimpan data pada form dan melakukan koneksi ke jaringan tersebut. Jika jaringan terputus, maka user dapat melakukan restart dan konfigurasi ulang ESP. Sehingga user tidak perlu mengubah koding dan hanya perlu mengakses IP address dari ESP saja.
+  
+    <img src="https://user-images.githubusercontent.com/49542850/209770990-41050f3a-48ef-459f-b0f3-0883ce2f3bab.png" width=600px>
+    <img src="https://user-images.githubusercontent.com/49542850/209770995-4659bd1e-d14f-4a07-8e4f-89b2efee8040.png" width=600px>
+    <img src="https://user-images.githubusercontent.com/49542850/209770996-6436cddc-9382-4621-bb08-e0b1676be455.png" width=600px>
+    <img src="https://user-images.githubusercontent.com/49542850/209770997-eba93b10-d34d-4cf5-8336-41cfd63cfba4.png" width=600px>
+
+## Kesimpulan
+  - ESP32 memiliki adapter WiFi internal yang dapat digunakan sebagaimana access point, yaitu sebagai AP, sebagai station, atau hybrid.
+  - Koneksi WiFi pada ESP dapat dilakukan auto reconnecting dengan mengecek status boolean WL_CONNECTED dan menambahkan perintah WiFi.reconnect()
+  - Nama dari ESP (hostname) dapat diganti dengan perintah WiFi.setHostname() untuk mempermudah dalam membedakan ESP pada jaringan.
+  - Untuk membuat suatu web server, ESP membutuhkan library salah satunya adalah AsyncTCP dan ESPWebServerAsync. Library ini memungkinkan ESP melakukan hosting pada local address. Kelemahanya adalah kode html, css, maupun javascript akan menumpuk dalam kodingan ESP.ino.
+  - Untuk mengirimkan data dari variabel menuju web server, dapat digunakan salah satu metode yaitu POST melalui javascript.
+  - Tool SPIIFS memungkinkan user untuk mengimport file eksternal ke dalam ESP, sehingga mempermudah dalam pembuatan contohnya web server.
+  - Dalam pemrograman, fleksibilitas dan user experience adalah hal utama, sehingga pada tugas dibuat suatu sistem WiFi client yang dapat dihubungkan ke AP manapun tanpa perlu mengubah kode di dalamnya (tidak hard coded).
 
