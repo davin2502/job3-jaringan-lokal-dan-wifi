@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ESP Wi-Fi Manager</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="data:," />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <div class="topnav">
+            <h1>ESP Wi-Fi Manager Davin-Ricky</h1>
+        </div>
+        <div class="content">
+            <div class="card-grid">
+                <div class="card">
+                    <form action="/" method="POST" class="inner-card">
+                        <div class="wrapper">
+                            <label for="ssid" class="block wrapper-s"
+                                >SSID</label
+                            >
+                            <input
+                                type="text"
+                                id="ssid"
+                                name="ssid"
+                                class="block wrapper-e"
+                            /><br />
+                        </div>
+                        <div class="wrapper">
+                            <label for="pass" class="block wrapper-s"
+                                >Password</label
+                            >
+                            <input
+                                type="text"
+                                id="pass"
+                                name="pass"
+                                class="block wrapper-e"
+                            /><br />
+                        </div>
+                        <div class="wrapper">
+                            <label for="ip" class="block wrapper-s"
+                                >IP Address</label
+                            >
+                            <input
+                                type="text"
+                                id="ip"
+                                name="ip"
+                                value=""
+                                class="block wrapper-e"
+                            /><br />
+                        </div>
+                        <div class="wrapper">
+                            <label for="gateway" class="block wrapper-s"
+                                >Gateway Address</label
+                            >
+                            <input
+                                type="text"
+                                id="gateway"
+                                name="gateway"
+                                value=""
+                                class="block wrapper-e"
+                            /><br />
+                        </div>
+                        <input type="submit" value="Submit" />
+                        <h5>
+                            IP address and gateway are optional (DHCP) otherwise
+                            it'll apply static configuration<br />
+                        </h5>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
