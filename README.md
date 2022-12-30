@@ -118,8 +118,8 @@ Setelah melakukan submit, ESP akan menyimpan data pada form dan melakukan koneks
   
   <img src="https://user-images.githubusercontent.com/118702169/210025541-9a81d24a-a18c-4b88-a145-b8a3ea31b1ef.png" width=600px>
   <img src="https://user-images.githubusercontent.com/118702169/210025543-74591a3a-6e17-4c14-a370-66672e4019d2.png" width=600px>
-  <img src="https://user-images.githubusercontent.com/118702169/210025545-0a49156f-0547-4e26-913d-1b402d1da420" width=600px>
-  <img src="https://user-images.githubusercontent.com/118702169/210025550-942b290c-8379-4633-a16d-f21acd13c152" width=600px>
+  <img src="https://user-images.githubusercontent.com/118702169/210025650-1c9c032c-aca8-46f8-bf5c-a945725c5a68.png" width=600px>
+  <img src="https://user-images.githubusercontent.com/118702169/210025655-d1e3a3b4-ddfe-4346-ad85-d43f0cbf24cf.png" width=600px>
 
 ## Kesimpulan
   - ESP32 memiliki adapter WiFi internal yang dapat digunakan sebagaimana access point, yaitu sebagai AP, sebagai station, atau hybrid.
