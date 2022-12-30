@@ -37,7 +37,7 @@ Pada jobsheet 3 terdapat 5 project yaitu scanning WiFi, WiFi station, WiFi auto-
   1. Download ESP32FS melalui link ESP32FS.
   2. Ekstrak dan upload pada direktori projek (sketchbook), contoh <Sketchbook-location>/tools/ESP32FS/tool/esp32fs.jar.
 
-## Project A - WiFi Modes and Scanning
+## Percobaan A. WiFi Modes and Scanning
 ### Rangkaian & Instalasi
   1. Siapkan ESP32 dan hubungkan ke Arduino IDE.
   2. Download dan jalankan kode dari source code sesuai project.
@@ -50,7 +50,7 @@ WiFi adapter pada ESP32 yang diset sebagai station akan melakukan scanning jarin
   
 ESP akan melakukan scanning dan memunculkan hasilnya pada serial monitor jaringan WiFi beserta kekuatan sinyal yang didapat. Jika tidak ada jaringan maka akan tertulis "No Networks Found". Scanning akan diulang setiap 5 detik karena terdapat delay(5000) dan lebih baik tidak dilakukan terlalu cepat (spam).
   
-## Project B - Menghubungkan ESP32 dengan jaringan WiFi (station mode)
+## Percobaan B. Menghubungkan ESP32 dengan jaringan WiFi (station mode)
 ### Rangkaian & Instalasi
   1. Siapkan ESP32 dan hubungkan ke Arduino IDE.
   2. Download dan jalankan kode dari source code sesuai project.
@@ -61,7 +61,7 @@ ESP akan melakukan scanning dan memunculkan hasilnya pada serial monitor jaringa
 
 ESP bertindak sebagai station atau client dari sebuah jaringan/AP yang ada. Sehingga SSID dan password dari jaringan harus diketahui agar ESP dapat terhubung. Pada kode dilakukan looping untuk pengecekan apakah ESP sudah terkoneksi dengan jaringan. Bila sudah, maka akan muncul IP address yang didapatkan ESP, pada contoh yaitu 192.168.108.88.
 
-## Project C - Menghubungkan Kembali (Re-connect) ESP32 dengan Jaringan Wi-Fi
+## Percobaan C. Menghubungkan Kembali (Re-connect) ESP32 dengan Jaringan Wi-Fi
 ### Rangkaian & Instalasi
   1. Siapkan ESP32 dan hubungkan ke Arduino IDE.
   2. Download dan jalankan kode dari source code sesuai project.
@@ -72,7 +72,7 @@ ESP bertindak sebagai station atau client dari sebuah jaringan/AP yang ada. Sehi
   
 Sistem auto reconnect adalah pengembangan dari sistem konek pada sebelumnya. Perbedaanya terdapat perkondisian untuk mendeteksi jaringan di dalam fungsi loop. Setelah dideteksi ESP terputus dari jaringan, maka setiap beberapa "jeda waktu", maka ESP akan mencoba melakukan konek ulang ke jaringan yang sebelumnya telah terhubung, dalam hal ini telah ditulis SSID dan password pada tahap sebelumnya.
 
-## Project D - Mengganti Hostname ESP32
+## Percobaan D. Mengganti Hostname ESP32
 ### Rangkaian & Instalasi
   1. Siapkan ESP32 dan hubungkan ke Arduino IDE.
   2. Download dan jalankan kode dari source code sesuai project.
@@ -83,7 +83,7 @@ Sistem auto reconnect adalah pengembangan dari sistem konek pada sebelumnya. Per
 
 Hostname merupakan identitas perangkat yang dipakai oleh ESP32. Hostname akan muncul ketika ESP terhubung ke suatu jaringan, maka pemilik jaringan tersebut (AP) dapat melihat identitas dari perangkat yang terhubung, dalam hal ini adalah hostname dari ESP. ESP harus mendeklarasikan hostnamenya dengan perintah WiFi.setHostname() sebelum melakukan koneksi ke jaringan.
 
-## Project E - Mengirim Data Sensor ke Database
+## Percobaan E. Mengirim Data Sensor ke Database
 ### Rangkaian & Instalasi
   1. Siapkan ESP32 dan hubungkan ke Arduino IDE.
   2. Buat rangkaian berikut.
